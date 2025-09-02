@@ -28,7 +28,7 @@ def generate_synthetic_data(
         discount_percent = round(np.random.choice([0,10,20,30,50]), 2)
         promotion_flag = int(discount_percent > 0)
         expiry_date = date + timedelta(days=np.random.randint(30, 365))
-        inventory_level = np.random.randint(units_sold, units_sold + 50)
+        inventory_level = np.random.randint(0, units_sold + 20)
         safety_stock = np.random.randint(10, 30)
         reorder_point = safety_stock + np.random.randint(5, 20)
         order_quantity = np.random.randint(30, 100)
